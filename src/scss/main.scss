@@ -3,12 +3,6 @@
 @import "./fonts";
 @import "./common";
 
-.demo {
-	padding-top: 50px;
+// Sections
 
-	.container {
-		max-width: 960px;
-		margin-inline: auto;
-		text-align: center;
-	}
-}
+@import "./sections/industry";

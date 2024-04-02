@@ -2,5 +2,7 @@
 	"extends": [
 		"stylelint-config-standard-scss",
 		"stylelint-config-recess-order"
-	]
+	],
+	"ignoreFiles": "src/scss/_mixins.scss",
+	"rules": {}
 }

@@ -1,0 +1,65 @@
+.industry {
+	padding-top: clamp-calc(30px, 92px);
+	padding-bottom: clamp-calc(40px, 112px);
+	color: var(--color-white);
+	background: var(--color-god-gray);
+
+	&__title {
+		max-width: 70%;
+		margin: 0;
+		font-size: clamp-calc(30px, 75px);
+		font-weight: 900;
+		line-height: 120%;
+		text-wrap: wrap;
+
+		@media (width <= 580px) {
+			max-width: 100%;
+		}
+	}
+
+	&__list {
+		&_item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			min-height: 160px;
+			border-bottom: 1px solid var(--color-gray);
+
+			@media (width <= 600px) {
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: center;
+			}
+		}
+
+		&_numbers {
+			font-size: clamp-calc(20px, 45px);
+			font-weight: 900;
+			line-height: 140%;
+
+			span {
+				font-size: clamp-calc(45px, 74px);
+			}
+
+			color: var(--color-red);
+		}
+
+		&_text {
+			width: 280px;
+			font-size: clamp(1rem, calc(0.89rem + 0.57vw), 1.25rem);
+			line-height: 128%;
+			text-wrap: balance;
+
+			@media (width <= 600px) {
+				width: 100%;
+			}
+		}
+	}
+
+	&__description {
+		max-width: 989px;
+		padding-top: 33px;
+		font-size: clamp(1rem, calc(0.89rem + 0.57vw), 1.25rem);
+		line-height: 128%;
+	}
+}

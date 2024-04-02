@@ -3,6 +3,7 @@
 	--color-red: #ff4d00;
 	--color-god-gray: #0c0c0c;
 	--color-black: #000;
+	--color-gray: #585858;
 }
 
 *:focus-visible {
@@ -28,4 +29,9 @@ body {
 	line-height: 1.5;
 	color: var(--color-black);
 	background: var(--color-white);
+}
+
+.container {
+	width: min(100% - 30px, 1024px);
+	margin-inline: auto;
 }
