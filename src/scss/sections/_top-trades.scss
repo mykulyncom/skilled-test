@@ -1,0 +1,149 @@
+.top-trades {
+	padding-top: clamp-calc(60px, 108px);
+	padding-bottom: clamp-calc(50px, 92px);
+
+	&__title {
+		margin: 0;
+		font-size: clamp-calc(25px, 50px);
+		font-weight: 900;
+		line-height: 120%;
+		text-align: center;
+	}
+
+	&__list {
+		display: flex;
+		gap: 17px;
+		padding-top: clamp-calc(45px, 62px);
+
+		@media (width <= 680px) {
+			flex-direction: column;
+		}
+
+		&_item {
+			overflow: hidden;
+			border-radius: 20px;
+		}
+
+		&_img {
+			position: relative;
+			display: block;
+			max-width: 330px;
+			color: var(--color-white);
+
+			@media (width <= 980px) {
+				height: 400px;
+			}
+
+			@media (width <= 680px) {
+				max-width: 100%;
+				height: 340px;
+			}
+
+			img {
+				width: 100%;
+				height: 439px;
+				object-fit: cover;
+
+				@media (width <= 980px) {
+					height: auto;
+				}
+			}
+
+			picture {
+				display: flex;
+				line-height: 0;
+			}
+
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				content: '';
+				background: rgb(255 77 0 / 80%);
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+		}
+
+		&_overlay {
+			position: absolute;
+			inset: 0 0 38px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-end;
+			width: 100%;
+
+			@media (width <= 980px) {
+				padding: 0 15px;
+			}
+		}
+
+		&_title {
+			margin-bottom: clamp-calc(20px, 29px);
+			font-size: clamp-calc(20px, 33px);
+			font-weight: 700;
+			opacity: 0;
+			transition: transform 0.3s 0.15s ease, opacity 0.3s 0.15s ease;
+			transform: translateY(10px);
+		}
+
+		&_icon {
+			width: clamp-calc(30px, 44px);
+			opacity: 0;
+			transition: transform 0.3s 0.1s ease, opacity 0.3s 0.1s ease;
+			transform: translateY(10px);
+
+			img {
+				height: auto;
+			}
+		}
+
+		&_descr {
+			margin: 0;
+			font-size: 17px;
+			line-height: 140%;
+			text-align: center;
+			opacity: 0;
+			transition: transform 0.3s 0.18s ease, opacity 0.3s 0.18s ease;
+			transform: translateY(10px);
+		}
+	}
+
+	&__btn {
+		display: block;
+		width: max-content;
+		padding: 16px 70px;
+		margin-inline: auto;
+		margin-top: 66px;
+		font-size: 16px;
+		font-weight: 700;
+		color: var(--color-black);
+		border: 1px solid var(--color-black);
+		border-radius: 42px;
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: var(--color-white);
+			background: var(--color-red);
+			border-color: var(--color-red);
+		}
+	}
+}
+
+.top-trades__list_img {
+	&:hover {
+		&::before {
+			opacity: 1;
+		}
+
+		.top-trades__list_title,
+		.top-trades__list_icon,
+		.top-trades__list_descr {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
