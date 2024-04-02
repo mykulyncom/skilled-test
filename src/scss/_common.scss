@@ -1,3 +1,10 @@
+:root {
+	--color-white: #fff;
+	--color-red: #ff4d00;
+	--color-god-gray: #0c0c0c;
+	--color-black: #000;
+}
+
 *:focus-visible {
 	outline: 1px solid red;
 }
@@ -15,9 +22,10 @@ body {
 	position: relative;
 	min-width: 320px;
 	margin: 0;
-	font-family: sans-serif;
+	font-family: Gotham, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.5;
-	background: beige;
+	color: var(--color-black);
+	background: var(--color-white);
 }

@@ -1,6 +1,7 @@
 // 100 - Thin (Hailine)
 // 200 - Extra Light (Ultra Light)
 // 300 - Light
+// 350 - Book
 // 400 - Normal (Regular)
 // 500 - Medium
 // 600 - SemiBold (DemiBold)
@@ -11,4 +12,7 @@
 
 // @include font('FontName', 'fileName', 'weight');
 
-// @include font('OpenSans', 'OpenSans-Regular', 400);
+@include font("Gotham", "Gotham-Book", 400);
+@include font("Gotham", "Gotham-Medium", 500);
+@include font("Gotham", "Gotham-Bold", 700);
+@include font("Gotham", "Gotham-Black", 900);
