@@ -1,0 +1,14 @@
+@import "./normalize";
+@import "./mixins";
+@import "./fonts";
+@import "./common";
+
+.demo {
+	padding-top: 50px;
+
+	.container {
+		max-width: 960px;
+		margin-inline: auto;
+		text-align: center;
+	}
+}
